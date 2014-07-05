@@ -8,6 +8,7 @@
 
 #import "CHShineView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "FBTweakInline.h"
 
 @implementation CHShineView
 
@@ -45,7 +46,7 @@
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position.x"];
     anim.byValue = @(width * 2);
     anim.repeatCount = HUGE_VALF;
-    anim.duration = ;
+    anim.duration = FBTweakValue(@"Loading Animation", @"Shine", @"Duration", 3.0f);
     anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     [self.layer addSublayer:shineLayer];
