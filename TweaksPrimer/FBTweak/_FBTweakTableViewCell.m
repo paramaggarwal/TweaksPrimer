@@ -80,9 +80,7 @@ typedef NS_ENUM(NSUInteger, _FBTweakTableViewCellMode) {
     CGRect accessoryFrame = CGRectUnion(stepperFrame, textFrame);
     _accessoryView.bounds = CGRectIntegral(accessoryFrame);
   } else if (_mode == _FBTweakTableViewCellModeString) {
-    CGFloat margin = CGRectGetMinX(self.textLabel.frame);
-    CGFloat textFieldWidth = self.bounds.size.width - (margin * 3.0) - [self.textLabel sizeThatFits:CGSizeZero].width;
-    CGRect textBounds = CGRectMake(0, 0, textFieldWidth, self.bounds.size.height);
+    CGRect textBounds = CGRectMake(0, 0, self.bounds.size.width / 3, self.bounds.size.height);
     _textField.frame = CGRectIntegral(textBounds);
     _accessoryView.bounds = CGRectIntegral(textBounds);
   } else if (_mode == _FBTweakTableViewCellModeAction) {
@@ -262,12 +260,7 @@ typedef NS_ENUM(NSUInteger, _FBTweakTableViewCellMode) {
 
 - (void)_stepperChanged:(UIStepper *)stepper
 {
-  if (_mode == _FBTweakTableViewCellModeInteger) {
-    NSNumber *number = @([@(stepper.value) longLongValue]);
-    [self _updateValue:number primary:NO write:YES];
-  } else {
-    [self _updateValue:@(stepper.value) primary:NO write:YES];
-  }
+  [self _updateValue:@(stepper.value) primary:NO write:YES];
 }
 
 - (void)_updateValue:(FBTweakValue)value primary:(BOOL)primary write:(BOOL)write
