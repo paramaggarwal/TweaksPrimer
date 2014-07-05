@@ -12,6 +12,7 @@
 
 + (id)logoView;
 
-- (void)flash;
+@property (nonatomic) CALayer *mask;
+@property (nonatomic) BOOL flashingState;
 
 @end

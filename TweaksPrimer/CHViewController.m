@@ -7,6 +7,7 @@
 //
 
 #import "CHViewController.h"
+#import "FBTweakInline.h"
 
 @implementation CHViewController
 
@@ -18,8 +19,8 @@
     CHShineView *shineView = [CHShineView logoView];
     shineView.center = self.view.center;    
     [self.view addSubview:shineView];
-
-    [shineView flash];
+    
+    FBTweakBind(shineView, flashingState, @"Loading Animation", @"Shine", @"Enable", NO);
 }
 
 - (void)didReceiveMemoryWarning

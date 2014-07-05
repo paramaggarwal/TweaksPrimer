@@ -46,13 +46,23 @@
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position.x"];
     anim.byValue = @(width * 2);
     anim.repeatCount = HUGE_VALF;
-    anim.duration = FBTweakValue(@"Loading Animation", @"Shine", @"Duration", 3.0f);
+    anim.duration = FBTweakValue(@"Loading Animation", @"Shine", @"Duration", 1.0f);
     anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     [self.layer addSublayer:shineLayer];
     shineLayer.mask = mask;
     
     [mask addAnimation:anim forKey:@"shine"];
+    self.mask = mask;
+}
+
+- (void)setFlashingState:(BOOL)state {
+
+    if (state) {
+        [self flash];
+    } else {
+        [self.mask removeAnimationForKey:@"shine"];
+    }
 }
 
 @end
