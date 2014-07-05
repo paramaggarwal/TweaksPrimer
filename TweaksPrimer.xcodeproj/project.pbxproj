@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8BE4194D196735570068F98E /* TweaksPrimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweaksPrimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BE4194D196735570068F98E /* Hubris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hubris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE41950196735570068F98E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8BE41952196735570068F98E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8BE41954196735570068F98E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -131,7 +131,7 @@
 		8BE4194E196735570068F98E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8BE4194D196735570068F98E /* TweaksPrimer.app */,
+				8BE4194D196735570068F98E /* Hubris.app */,
 				8BE4196E196735570068F98E /* TweaksPrimerTests.xctest */,
 			);
 			name = Products;
@@ -243,7 +243,7 @@
 			);
 			name = TweaksPrimer;
 			productName = TweaksPrimer;
-			productReference = 8BE4194D196735570068F98E /* TweaksPrimer.app */;
+			productReference = 8BE4194D196735570068F98E /* Hubris.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8BE4196D196735570068F98E /* TweaksPrimerTests */ = {
@@ -466,7 +466,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TweaksPrimer/TweaksPrimer-Prefix.pch";
 				INFOPLIST_FILE = "TweaksPrimer/TweaksPrimer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hubris;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -479,7 +479,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TweaksPrimer/TweaksPrimer-Prefix.pch";
 				INFOPLIST_FILE = "TweaksPrimer/TweaksPrimer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hubris;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
