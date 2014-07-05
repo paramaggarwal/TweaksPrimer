@@ -7,12 +7,20 @@
 //
 
 #import "CHAppDelegate.h"
+#import "FBTweakShakeWindow.h"
+#import "FBTweakInline.h"
 
 @implementation CHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+        
+    self.window = [[FBTweakShakeWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 							
